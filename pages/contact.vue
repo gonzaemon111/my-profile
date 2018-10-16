@@ -9,7 +9,7 @@
 </template>
 <style scoped>
 .contact {
-    padding: 10px;
+    padding: 100px;
 }
 
 .contact ul li {
