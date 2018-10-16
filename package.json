@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "element-ui": "^2.4.8",
     "nuxt": "^2.0.0"
   },

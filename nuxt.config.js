@@ -24,6 +24,8 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    vendor: ['element-ui'],
+
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -34,6 +36,16 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  plugins: [
+    '~plugins/element-ui'
+  ],
+  css: [
+    'element-ui/lib/theme-chalk/index.css',
+    '@fortawesome/fontawesome-free-webfonts',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css'
+  ]
 }
 
