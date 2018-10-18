@@ -4,6 +4,12 @@
   "description": "Nuxt.js project",
   "author": "GokiSakuraba <goki14914@icloud.com>",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3333"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -15,6 +21,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "bootstrap-vue": "^2.0.0-rc.11",
     "element-ui": "^2.4.8",
     "nuxt": "^2.0.0"
   },

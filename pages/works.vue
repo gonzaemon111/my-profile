@@ -1,28 +1,59 @@
 <template>
-    <el-carousel :interval="4000" type="card" height="200px">
-        <el-carousel-item v-for="item in 6" :key="item">
-            <h3>{{ item }}</h3>
-        </el-carousel-item>
-    </el-carousel>
-</template>
+  <div>
+    <b-carousel id="carousel1"
+                style="text-shadow: 1px 1px 2px #333;"
+                controls
+                indicators
+                background="#ababab"
+                :interval="4000"
+                img-width="1024"
+                img-height="480"
+                v-model="slide"
+                @sliding-start="onSlideStart"
+                @sliding-end="onSlideEnd"
+    >
 
+      <!-- Text slides with image -->
+      <b-carousel-slide caption="First slide"
+                        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+                        width="1024" height="480"
+                        img-src="https://picsum.photos/1024/480/?image=56"
+                        id="carousel-slide"
+      ></b-carousel-slide>
+
+      <!-- Slides with custom text -->
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=57">
+        <h1><a href="https://calm-beyond-85175.herokuapp.com/" target="_blank">FreeeChat</a></h1>
+      </b-carousel-slide>
+
+      <!-- Slides with image only -->
+      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58">
+      </b-carousel-slide>
+
+      <!-- Slides with img slot -->
+      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+      <b-carousel-slide>
+        <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
+             src="https://picsum.photos/1024/480/?image=55" alt="image slot">
+      </b-carousel-slide>
+
+      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+      <b-carousel-slide caption="Blank Image" img-src="https://picsum.photos/1024/480/?image=60" img-alt="Blank image">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque
+          ut lacus vel interdum.
+        </p>
+      </b-carousel-slide>
+
+    </b-carousel>
+
+  </div>
+</template>
+<!-- carousel-1.vue -->
 
 <style scoped>
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 200px;
-    margin: 0;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-    height: 37em;
-  }
-
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-    height: 37em;
-  }
+#carousel-slide {
+    text-decoration-color: black;
+}
 </style>
