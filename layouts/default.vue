@@ -2,7 +2,7 @@
   <div>
     <el-container>
       <el-header>
-        <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#B3C0D1" text-color="#fff" active-text-color="#ffd04b">
+        <el-menu :default-active="activeIndex2" class="el-menu-demo" mode="horizontal" @select="handleSelect" background-color="#B3C0D1" text-color="#fff" active-text-color="#ffd04b" style="height: 100%">
           <el-menu-item index="1"><nuxt-link to="/">Home</nuxt-link></el-menu-item>
           <el-menu-item index="2"><nuxt-link to="works">Works</nuxt-link></el-menu-item>
           <el-menu-item index="3"><nuxt-link to="contact">Contact</nuxt-link></el-menu-item>
@@ -27,11 +27,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
+  height: 100%;
 }
 
 .button--green {
@@ -86,6 +88,7 @@ html {
 
 body > .el-container {
   margin-bottom: 40px;
+  height: 100%;
 }
 
 .el-container:nth-child(5) .el-aside,
